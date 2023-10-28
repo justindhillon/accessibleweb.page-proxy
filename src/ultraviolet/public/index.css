@@ -77,33 +77,33 @@ footer {
   margin: 0 5vw;
   margin-top: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   line-height: 30px;
   margin-bottom: 20px;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
 }
 
 footer > div {
   display: flex;
-  justify-content: left;
-  align-items: center;
   flex-wrap: wrap;
   margin-bottom: 15px;
 }
 
-footer a,
-footer span {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 15px;
-}
-
 footer a {
+  width: 3em;
+  height: 3em;
   cursor: pointer;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  filter: brightness(50%);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .desc p {
