@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background-color: #111;
+    margin: 0;
+    width: 100vw;
+    height: 10vh;
+    color: white;
+}
+
+iframe {
+    width: 100vw;
+    height: 90vh;
+    border: none;
+}

@@ -2,6 +2,7 @@ import { createBareServer } from "@tomphttp/bare-server-node";
 import express from "express";
 import { createServer } from "node:http";
 import { publicPath } from "./landing-page/lib/index.js";
+import { settings } from "./settings/lib/index.js";
 import { uvPath } from "./proxy/lib/index.cjs";
 import { join } from "node:path";
 import { hostname } from "node:os";
@@ -9,10 +10,13 @@ import { hostname } from "node:os";
 const bare = createBareServer("/bare/");
 const app = express();
 
+// Loads settings
+app.use("/home/",express.static(settings));
+
 // Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
+
 // Load vendor files last.
-// The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
 
 // Error for everything else
