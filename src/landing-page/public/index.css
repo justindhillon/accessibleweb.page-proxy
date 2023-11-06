@@ -78,11 +78,18 @@ footer {
   margin-top: auto;
   display: flex;
   justify-content: center;
-  line-height: 30px;
-  margin-bottom: 20px;
+  line-height: 2em;
+  margin-bottom: 1.5em;
   align-items: center;
   flex-direction: row;
   gap: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 3em;
+    margin-bottom: 50em;
+  }
 }
 
 footer > div {
