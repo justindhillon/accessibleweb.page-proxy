@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -30,11 +31,12 @@ body.blur {
 
 iframe {
     width: 100vw;
-    height: 90vw;
+    height: calc(100vh - 4em);
     border: none;
 }
 
 header {
+    height: 2em;
     width: 100% - 1em;
     background-color: #111;
     text-align: center;
