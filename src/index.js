@@ -2,16 +2,12 @@ import { createBareServer } from "@tomphttp/bare-server-node";
 import express from "express";
 import { createServer } from "node:http";
 import { publicPath } from "./landing-page/lib/index.js";
-import { settings } from "./settings/lib/index.js";
-import { uvPath } from "./proxy/lib/index.cjs";
+import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { join } from "node:path";
 import { hostname } from "node:os";
 
 const bare = createBareServer("/bare/");
 const app = express();
-
-// Loads settings
-app.use("/home/",express.static(settings));
 
 // Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
