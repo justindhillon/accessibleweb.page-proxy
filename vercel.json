@@ -2,10 +2,6 @@
     "version": 2,
     "name": "accessibleweb.page-proxy",
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "npm start"
-      }
+       { "src": "/(.*)", "dest": "src/index.js" }
     ]
-}
-  
+ }
