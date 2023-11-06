@@ -85,7 +85,7 @@ footer {
   gap: 1em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-device-width: 768px) {
   footer {
     margin-top: 3em;
     margin-bottom: 50em;
